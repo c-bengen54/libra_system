@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 load_dotenv(BASE_DIR / ".env")
 
 
-pool = ConnectionPool(os.getenv("DATABASE_URL"), min_size=1, max_size=10)
+pool = ConnectionPool(os.getenv("DATABASE_URL"), min_size=1, max_size=4, check=ConnectionPool.check_connection,)
 
 def _execute(query, params=None):
     with pool.connection() as conn:
