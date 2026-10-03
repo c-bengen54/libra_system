@@ -26,6 +26,9 @@ app.register_blueprint(auth_bp)
 app.register_blueprint(account_bp)
 app.register_blueprint(admin_bp)
 
+app.config["SESSION_COOKIE_SECURE"] = True
+app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
+
 @app.errorhandler(400)
 def bad_request(e):
     return render_template("errors/400.html"), 400
