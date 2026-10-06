@@ -14,20 +14,19 @@ The core Flask application, database integration, authentication, and primary li
 
 ### Remaining Development
 
-* Administrator functionality
 * Advanced search systems
 * Due dates
 * Overdue tracking
-* Expanded logging
-* Custom error handling
-* Containerization
-* Production deployment/rollout
-* Book searching
 * Viewing borrowed books
 * Viewing reservations
 ## Implemented Features
 
 * Flask web application
+* Expanded logging
+* Custom error handling
+* Containerization
+* Production deployment/rollout
+* Book searching
 * User registration
 * User login
 * Session-based authentication
